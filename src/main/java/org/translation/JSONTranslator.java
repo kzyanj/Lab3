@@ -57,7 +57,7 @@ public class JSONTranslator implements Translator {
         List<String> countryLanguages = new ArrayList<>();
         for (int j = 0; j < countryArray.size(); j++) {
             JSONObject countryObject = countryArray.get(j);
-            String alphathree = new String("alpha3");
+            String alphathree = "alpha3";
             if (countryObject.getString(alphathree).equals(country)) {
                 JSONArray keys = countryObject.names();
                 for (int i = 0; i < keys.length(); i++) {

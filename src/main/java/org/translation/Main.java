@@ -36,7 +36,7 @@ public class Main {
      */
     public static void runProgram(Translator translator) {
         while (true) {
-            String quit = new String("quit");
+            String quit = "quit";
             String country = promptForCountry(translator);
 
             if (country.equals(quit)) {
