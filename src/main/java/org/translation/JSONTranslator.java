@@ -16,8 +16,10 @@ import org.json.JSONObject;
  */
 public class JSONTranslator implements Translator {
 
-    private static JSONTranslator instance; // Singleton instance
-    private ArrayList<JSONObject> countryArray = new ArrayList<>(); // Instance variable
+    private static JSONTranslator instance;
+    // Singleton instance
+    private ArrayList<JSONObject> countryArray = new ArrayList<>();
+    // Instance variable
 
     // private static ArrayList<JSONObject> countryArray = new ArrayList<>();
 
@@ -55,7 +57,8 @@ public class JSONTranslator implements Translator {
         List<String> countryLanguages = new ArrayList<>();
         for (int j = 0; j < countryArray.size(); j++) {
             JSONObject countryObject = countryArray.get(j);
-            if (countryObject.getString("alpha3").equals(country)) {
+            String alphathree = new String("alpha3");
+            if (countryObject.getString(alphathree).equals(country)) {
                 JSONArray keys = countryObject.names();
                 for (int i = 0; i < keys.length(); i++) {
                     String key = keys.getString(i);

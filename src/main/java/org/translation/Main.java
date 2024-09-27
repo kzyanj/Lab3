@@ -98,10 +98,7 @@ public class Main {
         for (String language : languages) {
             System.out.println(language);
         }
-
-
         System.out.println("select a language from above:");
-
         Scanner s = new Scanner(System.in);
         return s.nextLine();
     }
